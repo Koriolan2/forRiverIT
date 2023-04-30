@@ -1,0 +1,58 @@
+.filter {
+    &-producer {
+        @extend %filter-section;
+    
+        &-items {
+            list-style-type:none;
+            display:flex;
+            flex-direction: column;
+            row-gap: 15px;
+    
+            
+        }
+    
+        &-item {
+            display:flex;
+            column-gap: 20px;
+            cursor:pointer;
+
+            &.checked{
+                .filter-radio {
+                    background: {
+                        position: -46px 0
+                    }
+                }
+            }
+        }
+    
+    
+        &-logo{
+            height: 29px;
+            width: 92px;
+        }
+    }
+
+    &-radio {
+        width: 24px;
+        height:24px;
+        background: {
+            image: url(img/radio.svg);
+            size: 70px 24px;
+            position: 0 0
+        }
+
+        &:hover{
+            background: {
+                position: -23px 0
+            }
+        }
+
+        &.checked {
+            background: {
+                position: -46px 0
+            }
+        }
+    }
+
+    
+}

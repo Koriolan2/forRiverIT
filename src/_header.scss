@@ -1,0 +1,20 @@
+.header {    
+    height: 60px; 
+    
+    @include flexbox;
+    
+    @include tablet {
+        background: {
+            color: $color2;
+        };
+        height: 80px;
+        padding: 20px 0;        
+    }
+
+    .container {
+        display:flex;
+        justify-content: center;
+    }
+}
+
+

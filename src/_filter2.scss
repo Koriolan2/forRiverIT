@@ -1,0 +1,39 @@
+.filter{
+    &-type {
+        &-items {
+            list-style-type: none;
+            display:flex;
+            flex-direction: column;
+            row-gap: 15px;
+        }
+
+        &-item {
+            display:flex;
+            column-gap: 20px;
+            cursor:pointer;
+            color: $color2;
+        }
+    }
+
+    &-check {
+        display: inline-block;
+        width:24px;
+        height:24px;
+        background: {
+            image: url(img/check.svg);
+            size: 48.76px 24px;
+            position: 0 0;
+            repeat: no-repeat;
+        }
+        
+    }
+
+    .checked{
+        .filter-check {
+            background: {
+                position: -24px 0;
+            }
+        }
+        color: $color3;        
+    }
+}

@@ -1,0 +1,65 @@
+button {
+    background-color: transparent;
+    border:none;
+    cursor:pointer;
+}
+.btn {
+    background-color: transparent;
+    border:2px solid $color3;
+    width: 180px;
+    height: 60px;
+    cursor:pointer;
+    position: relative;
+    transition: all 0.5s;
+    overflow:hidden;
+
+    &::after {
+        content:" ";
+        display: block;
+        position:absolute;
+        z-index: -1;
+        background-color: $color3;
+        top:0;
+        left: 0;
+        bottom:0;
+        right:0;
+        transform:translateX(-100%);
+        transition: all 0.5s;
+    }
+
+    &:hover {
+        color: $color1;
+
+        &::after {
+            transform:translateX(0%)
+        }
+    }
+
+    &-active {
+        color: $color1;
+        background-color: $color3;
+    }
+
+    &-disabled {
+        border: 2px solid $color2;
+        color: $color2;
+    }
+    
+}
+
+
+.nav-btn {
+    width: 60px;
+    height:60px;
+    background: {
+        color: $color2;
+    }
+    position: absolute;
+    z-index: 1000;
+    
+
+    @include tablet{
+        display: none;
+    }
+}
+

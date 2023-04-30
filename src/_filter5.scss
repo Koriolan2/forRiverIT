@@ -1,0 +1,58 @@
+.filter-characteristic {
+    @extend %filter-section;
+
+    &-selected {
+        width: 100%;
+        position:relative;
+        min-height: 40px;
+        padding: 7px 15px;
+        background:{
+            color: #fff;
+        }
+        color: #333333;
+        font-size: 14px;
+
+        span {
+           display: inline-block;
+           margin: 0 5px;
+        }
+
+        .delete{
+            font-size: 1.5em;
+            font-weight: bold;
+            cursor:pointer;
+        }
+    }
+
+    &-items {
+        position: absolute;
+        list-style-type:none;
+        background-color: #fff;
+        margin: 5px 0;
+        padding: 15px;
+        z-index: 100;
+        width: 100%;
+        box-shadow: 0 0 7px;
+    }
+
+    &-item {
+        padding: 3px 0;
+        color: #cbcbcb;
+
+        &.select {
+            color: #333333;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    &-btn {
+        width: 9px;
+        height:4px;
+        position: absolute;
+        right:10px;
+        top:50%;
+    }
+}

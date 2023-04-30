@@ -1,0 +1,18 @@
+.filter-vote {
+    @extend %filter-section;
+
+    &-items { 
+        list-style-type: none;
+        display: flex;
+    }
+
+    &-item { 
+        width: 27.3px;
+        height: 26px;
+        cursor:pointer;
+    }
+
+    &-star {
+        width: 27.3px;
+        height: 26px;}
+    }

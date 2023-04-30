@@ -1,0 +1,30 @@
+.filter-clothes {
+    @extend %filter-section;
+
+    &-items{
+        display: flex;
+        align-items:center;
+        list-style-type: none;
+    }
+
+    &-item{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        height: 80px;
+        transition: background-color 0.8s;
+        cursor:pointer;
+
+        &:hover, &.active{
+            background:{
+                color: $color4;
+            }
+            
+        }
+
+        svg{
+            width: 80%;
+            height:80%;
+        }
+    }
+}

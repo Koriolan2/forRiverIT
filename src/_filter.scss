@@ -1,0 +1,45 @@
+.filter {
+    min-height: 80vh;
+    @include flexbox;
+
+    .container {
+        display: grid;
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 80px;
+        }
+    }
+
+    &-title {
+        @extend %filter-section;
+        padding-bottom: 50px;
+
+        @include tablet {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+    
+    &-price {
+        @extend %filter-section;
+
+        
+    }
+    &-type {
+        @extend %filter-section;
+    }
+
+  
+
+
+    &-buttons {
+        @extend %filter-section;
+        border-bottom:none;
+        
+        @include tablet {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@mixin flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+@mixin media($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @include media(768px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @include media(540px) {
+        @content;
+    }
+}
+
+%filter-section {
+    padding: 30px 0;
+    border-bottom: 1px solid $color2;
+}
